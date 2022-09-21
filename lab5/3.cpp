@@ -1,20 +1,29 @@
+// Write a C++ Program to check Palindrome using function overloading.
+
 #include <iostream>
 using namespace std;
 
-class Area{
+class Palindrome{
     public:
+    string name;
+    void check(string temp){
+        name=temp;
+    }
+    void check(){
+        int length=name.length();
+        string temp=name;
+        for (int i = 0; i < length / 2; i++) swap(name[i], name[length - i - 1]);
 
-        void cal(int length,int breadth){
-                cout<<"Area of rectangle is : "<<length*breadth;
-        }
-        void cal(int side){
-            cout<<"\nArea of square is : "<<side*side;
+        if(name==temp) cout<<"Palindrome";
+        else cout<<"Not a Palindrome";
         }
 };
 
 int main(){
-    Area a1;
-    a1.cal(3,4);
-    a1.cal(3);
+    string name;
+    cin>>name;
+    Palindrome p1;
+    p1.check(name);
+    p1.check();
     return 0;
 }

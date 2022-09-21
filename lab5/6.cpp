@@ -1,34 +1,26 @@
+// Create a class to print the area of a square and a rectangle. The class has two
+// functions with the same name but different number of parameters. The function for
+// printing the area of rectangle has two parameters which are its length and breadth
+// respectively while the other function for printing the area of square has one
+// parameter which is the side of the square.
+
 #include <iostream>
 using namespace std;
 
-class Compare{
+class Area{
     public:
-        string name1;
-        string name2;
 
-        void cal(string n1,string n2){
-                name1=n1;
-                name2=n2;
+        void cal(int length,int breadth){
+                cout<<"Area of rectangle is : "<<length*breadth;
         }
-        void cal(){
-            if(name1!=name2){
-                cout<<"Not same \n";
-                if(name1>name2){
-                    cout<<"String 1 is greater than string 2";
-                }
-                else{
-                    cout<<"String 2 is greater than string 1";
-                }
-            }
-            else{
-                cout<<"\nBoth are same";
-            }
+        void cal(int side){
+            cout<<"\nArea of square is : "<<side*side;
         }
 };
 
 int main(){
-    Compare s1;
-    s1.cal("Malli","Malli");
-    s1.cal();
+    Area a1;
+    a1.cal(3,4);
+    a1.cal(3);
     return 0;
 }

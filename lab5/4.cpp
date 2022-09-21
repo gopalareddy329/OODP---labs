@@ -1,27 +1,26 @@
+//Write a C++ Program to check Palindrome using function overloading.
+
 #include <iostream>
 using namespace std;
 
-class Palindrome{
+class Volume{
     public:
-    string name;
-    void check(string temp){
-        name=temp;
-    }
-    void check(){
-        int length=name.length();
-        string temp=name;
-        for (int i = 0; i < length / 2; i++) swap(name[i], name[length - i - 1]);
 
-        if(name==temp) cout<<"Palindrome";
-        else cout<<"Not a Palindrome";
+        void cal(int s){
+            cout<<"Volume of cube : "<<s*s*s;
+        }
+        void cal(int r,int h){
+            cout<<"\nVolume of cylinder : "<<3.14*(r*r)*h;
+        }
+        void cal(float n,float pi,int r){
+            cout<<"\nVolume of sphere : "<<n*(pi)*(r*r*r);
         }
 };
 
 int main(){
-    string name;
-    cin>>name;
-    Palindrome p1;
-    p1.check(name);
-    p1.check();
+    Volume b1;
+    b1.cal(3);
+    b1.cal(3,4);
+    b1.cal(1.33,3.14,7);
     return 0;
 }
