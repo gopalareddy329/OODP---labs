@@ -1,4 +1,5 @@
-//Write a C++ Program to check Palindrome using function overloading.
+// Write a C++ program to find Volume of Cube, Cylinder, Sphere using Function
+// Overloading.
 
 #include <iostream>
 using namespace std;
