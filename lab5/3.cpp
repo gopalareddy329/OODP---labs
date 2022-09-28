@@ -13,7 +13,6 @@ class Palindrome{
         int length=name.length();
         string temp=name;
         for (int i = 0; i < length / 2; i++) swap(name[i], name[length - i - 1]);
-
         if(name==temp) cout<<"Palindrome";
         else cout<<"Not a Palindrome";
         }
