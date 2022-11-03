@@ -22,8 +22,9 @@ class Compare{
         }
 };
 int main(){
-    Compare<int>o1(20,30);
-        int a;
+    int c,b;
+    cin>>b>>c;
+    Compare<int>o1(b,c);
         a=o1.cal();
         cout<<a;
 }
